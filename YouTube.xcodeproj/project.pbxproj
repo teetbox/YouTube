@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B75B221F07DFFC00307944 /* AppDelegate.swift */; };
-		C9B75B251F07DFFC00307944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B75B241F07DFFC00307944 /* ViewController.swift */; };
-		C9B75B281F07DFFC00307944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B261F07DFFC00307944 /* Main.storyboard */; };
+		C9B75B251F07DFFC00307944 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B75B241F07DFFC00307944 /* HomeController.swift */; };
 		C9B75B2A1F07DFFC00307944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B291F07DFFC00307944 /* Assets.xcassets */; };
 		C9B75B2D1F07DFFC00307944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B2B1F07DFFC00307944 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		C9B75B1F1F07DFFC00307944 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B75B221F07DFFC00307944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9B75B241F07DFFC00307944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C9B75B271F07DFFC00307944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9B75B241F07DFFC00307944 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C9B75B291F07DFFC00307944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9B75B2C1F07DFFC00307944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9B75B2E1F07DFFC00307944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,8 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				C9B75B221F07DFFC00307944 /* AppDelegate.swift */,
-				C9B75B241F07DFFC00307944 /* ViewController.swift */,
-				C9B75B261F07DFFC00307944 /* Main.storyboard */,
+				C9B75B241F07DFFC00307944 /* HomeController.swift */,
 				C9B75B291F07DFFC00307944 /* Assets.xcassets */,
 				C9B75B2B1F07DFFC00307944 /* LaunchScreen.storyboard */,
 				C9B75B2E1F07DFFC00307944 /* Info.plist */,
@@ -125,7 +122,6 @@
 			files = (
 				C9B75B2D1F07DFFC00307944 /* LaunchScreen.storyboard in Resources */,
 				C9B75B2A1F07DFFC00307944 /* Assets.xcassets in Resources */,
-				C9B75B281F07DFFC00307944 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9B75B251F07DFFC00307944 /* ViewController.swift in Sources */,
+				C9B75B251F07DFFC00307944 /* HomeController.swift in Sources */,
 				C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,14 +140,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C9B75B261F07DFFC00307944 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9B75B271F07DFFC00307944 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C9B75B2B1F07DFFC00307944 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,6 +289,7 @@
 				C9B75B331F07DFFC00307944 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
