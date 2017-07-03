@@ -13,6 +13,7 @@
 		C9F0ED191F09EC55003443C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED181F09EC55003443C9 /* Extensions.swift */; };
 		C9F0ED1D1F09ED1E003443C9 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */; };
 		C9F0ED1F1F09ED63003443C9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED1E1F09ED63003443C9 /* HomeController.swift */; };
+		C9F0ED211F09F2FF003443C9 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED201F09F2FF003443C9 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C9F0ED181F09EC55003443C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Helpers/Extensions.swift; sourceTree = "<group>"; };
 		C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = Views/VideoCell.swift; sourceTree = "<group>"; };
 		C9F0ED1E1F09ED63003443C9 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = Controllers/HomeController.swift; sourceTree = "<group>"; };
+		C9F0ED201F09F2FF003443C9 /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = Views/MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */,
+				C9F0ED201F09F2FF003443C9 /* MenuBar.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				C9F0ED191F09EC55003443C9 /* Extensions.swift in Sources */,
 				C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */,
 				C9F0ED1F1F09ED63003443C9 /* HomeController.swift in Sources */,
+				C9F0ED211F09F2FF003443C9 /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

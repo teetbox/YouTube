@@ -8,17 +8,27 @@
 
 import UIKit
 
-class VideoCell: UICollectionViewCell {
-    
+class BaseCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setupViews()
     }
     
+    func setupViews() {
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+class VideoCell: BaseCell {
+    
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "Matt")
+        imageView.image = UIImage(named: "taylor_swift_blank_space")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         return imageView
@@ -26,7 +36,7 @@ class VideoCell: UICollectionViewCell {
     
     let userProfileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "TT")
+        imageView.image = UIImage(named: "taylor_swift_profile")
         imageView.layer.cornerRadius = 22
         imageView.layer.masksToBounds = true
         return imageView
@@ -34,14 +44,14 @@ class VideoCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Matt Tian - Blank Space"
+        label.text = "Taylor Swift - Blank Space"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let subtitleTextView: UITextView = {
         let textView = UITextView()
-        textView.text = "I learn swift programming on YouTube 🍒. I love it."
+        textView.text = "TaylorSwiftVEVO • 1,604,684,807 views • 2 years age 🍒"
         textView.textColor = UIColor.lightGray
         textView.textContainerInset = UIEdgeInsetsMake(0, -4, 0, 0)
         textView.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +64,7 @@ class VideoCell: UICollectionViewCell {
         return view
     }()
     
-    func setupViews() {
+    override func setupViews() {
         addSubview(thumbnailImageView)
         addSubview(userProfileImageView)
         addSubview(titleLabel)
@@ -87,9 +97,5 @@ class VideoCell: UICollectionViewCell {
         // height constrain for subtitle
         addConstraint(NSLayoutConstraint(item: subtitleTextView, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 30))
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
 }
