@@ -75,6 +75,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     let video = Video()
                     video.title = dictionary["title"] as? String
                     video.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
+                    video.numberOfViews = dictionary["number_of_views"] as? NSNumber
                     
                     let channelDictionary = dictionary["channel"] as! [String: Any]
                     let channel = Channel()
