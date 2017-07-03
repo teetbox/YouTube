@@ -12,28 +12,32 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    var videos: [Video] = {
-        var channel = Channel()
-        channel.name = "Kanye Channel"
-        channel.profileImageName = "kanye_profile"
-        
-        var blackSpaceVideo = Video()
-        blackSpaceVideo.title = "Taylor Swift - Blank Space"
-        blackSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
-        blackSpaceVideo.numberOfViews = 1234567899
-        blackSpaceVideo.channel = channel
-        
-        var badBloodVideo = Video()
-        badBloodVideo.title = "Taylor Swift - Bad Blood Featuring Kendrick"
-        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
-        badBloodVideo.numberOfViews = 12348745807
-        badBloodVideo.channel = channel
-        
-        return [blackSpaceVideo, badBloodVideo]
-    }()
+//    var videos: [Video] = {
+//        var channel = Channel()
+//        channel.name = "Kanye Channel"
+//        channel.profileImageName = "kanye_profile"
+//        
+//        var blackSpaceVideo = Video()
+//        blackSpaceVideo.title = "Taylor Swift - Blank Space"
+//        blackSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
+//        blackSpaceVideo.numberOfViews = 1234567
+//        blackSpaceVideo.channel = channel
+//        
+//        var badBloodVideo = Video()
+//        badBloodVideo.title = "Taylor Swift - Bad Blood Featuring Kendrick"
+//        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
+//        badBloodVideo.numberOfViews = 12348745807
+//        badBloodVideo.channel = channel
+//        
+//        return [blackSpaceVideo, badBloodVideo]
+//    }()
+
+    var videos: [Video]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchVideos()
         
         navigationItem.title = "Home"
         navigationController?.navigationBar.isTranslucent = false
@@ -52,6 +56,45 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         setupMenuBar()
         setupNavButtons()
+    }
+    
+    func fetchVideos() {
+        let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
+        
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print(error!)
+            }
+            
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                
+                self.videos = [Video]()
+                
+                for dictionary in json as! [[String: Any]] {
+                    let video = Video()
+                    video.title = dictionary["title"] as? String
+                    video.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
+                    
+                    let channelDictionary = dictionary["channel"] as! [String: Any]
+                    let channel = Channel()
+                    channel.name = channelDictionary["name"] as? String
+                    channel.profileImageName = channelDictionary["profile_image_name"] as? String
+                    
+                    video.channel = channel
+                    
+                    self.videos?.append(video)
+                }
+                
+                DispatchQueue.main.async {
+                    self.collectionView?.reloadData()
+                }
+                
+            } catch let jsonError {
+                print(jsonError)
+            }
+            
+        }.resume()
     }
     
     let menuBar: MenuBar = {
@@ -84,13 +127,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videos.count
+        return videos?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
         
-        cell.video = videos[indexPath.item]
+        cell.video = videos?[indexPath.item]
         
         return cell
     }
