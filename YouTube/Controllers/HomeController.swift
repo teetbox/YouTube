@@ -11,26 +11,6 @@ import UIKit
 import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
-//    var videos: [Video] = {
-//        var channel = Channel()
-//        channel.name = "Kanye Channel"
-//        channel.profileImageName = "kanye_profile"
-//        
-//        var blackSpaceVideo = Video()
-//        blackSpaceVideo.title = "Taylor Swift - Blank Space"
-//        blackSpaceVideo.thumbnailImageName = "taylor_swift_blank_space"
-//        blackSpaceVideo.numberOfViews = 1234567
-//        blackSpaceVideo.channel = channel
-//        
-//        var badBloodVideo = Video()
-//        badBloodVideo.title = "Taylor Swift - Bad Blood Featuring Kendrick"
-//        badBloodVideo.thumbnailImageName = "taylor_swift_bad_blood"
-//        badBloodVideo.numberOfViews = 12348745807
-//        badBloodVideo.channel = channel
-//        
-//        return [blackSpaceVideo, badBloodVideo]
-//    }()
 
     var videos: [Video]?
     
@@ -123,8 +103,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
     }
     
+    let settingsLauncher = SettingsLauncher()
+
     func handleMore() {
-        
+        settingsLauncher.showSettings()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

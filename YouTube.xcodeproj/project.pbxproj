@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9A0A2E21F0B1E980036591A /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0A2E11F0B1E980036591A /* SettingsLauncher.swift */; };
 		C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B75B221F07DFFC00307944 /* AppDelegate.swift */; };
 		C9B75B2A1F07DFFC00307944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B291F07DFFC00307944 /* Assets.xcassets */; };
 		C9B75B2D1F07DFFC00307944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B2B1F07DFFC00307944 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9A0A2E11F0B1E980036591A /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsLauncher.swift; path = Controllers/SettingsLauncher.swift; sourceTree = "<group>"; };
 		C9B75B1F1F07DFFC00307944 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B75B221F07DFFC00307944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B75B291F07DFFC00307944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				C9F0ED1E1F09ED63003443C9 /* HomeController.swift */,
+				C9A0A2E11F0B1E980036591A /* SettingsLauncher.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9A0A2E21F0B1E980036591A /* SettingsLauncher.swift in Sources */,
 				C9F0ED281F0A22E6003443C9 /* Channel.swift in Sources */,
 				C9F0ED1D1F09ED1E003443C9 /* VideoCell.swift in Sources */,
 				C9F0ED241F0A1419003443C9 /* Video.swift in Sources */,
