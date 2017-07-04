@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C9A0A2E21F0B1E980036591A /* SettingsLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0A2E11F0B1E980036591A /* SettingsLauncher.swift */; };
+		C9A0A2E41F0B3A300036591A /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A0A2E31F0B3A300036591A /* SettingCell.swift */; };
 		C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B75B221F07DFFC00307944 /* AppDelegate.swift */; };
 		C9B75B2A1F07DFFC00307944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B291F07DFFC00307944 /* Assets.xcassets */; };
 		C9B75B2D1F07DFFC00307944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B2B1F07DFFC00307944 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		C9A0A2E11F0B1E980036591A /* SettingsLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsLauncher.swift; path = Controllers/SettingsLauncher.swift; sourceTree = "<group>"; };
+		C9A0A2E31F0B3A300036591A /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingCell.swift; path = Views/SettingCell.swift; sourceTree = "<group>"; };
 		C9B75B1F1F07DFFC00307944 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B75B221F07DFFC00307944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9B75B291F07DFFC00307944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */,
 				C9F0ED201F09F2FF003443C9 /* MenuBar.swift */,
+				C9A0A2E31F0B3A300036591A /* SettingCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */,
 				C9F0ED1F1F09ED63003443C9 /* HomeController.swift in Sources */,
 				C9F0ED211F09F2FF003443C9 /* MenuBar.swift in Sources */,
+				C9A0A2E41F0B3A300036591A /* SettingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
