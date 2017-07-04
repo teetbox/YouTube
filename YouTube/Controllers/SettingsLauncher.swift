@@ -8,12 +8,19 @@
 
 import UIKit
 
-struct Setting {
+class Setting: NSObject {
     let name: String
     let imageName: String
+    
+    init(name: String, imageName: String) {
+        self.name = name
+        self.imageName = imageName
+    }
 }
 
 class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    var homeViewController: HomeController?
     
     let blackView = UIView()
     let collectionView: UICollectionView = {
@@ -39,7 +46,8 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
             blackView.frame = window.frame
             blackView.alpha = 0
             
-            blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleDismiss))
+            blackView.addGestureRecognizer(tapGesture)
             
             window.addSubview(blackView)
             
@@ -56,12 +64,16 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         }
     }
     
-    func handleDismiss() {
-        UIView.animate(withDuration: 0.5) {
+    func handleDismiss(_ setting: Setting) {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: { 
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
                 self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+            }
+        }) { _ in
+            if setting.name != "" && setting.name != "Cancel" {
+                self.homeViewController?.showController(from: setting)
             }
         }
     }
@@ -76,6 +88,10 @@ class SettingsLauncher: NSObject, UICollectionViewDataSource, UICollectionViewDe
         cell.setting = settings[indexPath.item]
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        handleDismiss(settings[indexPath.item])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
