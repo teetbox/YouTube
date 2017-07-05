@@ -13,6 +13,7 @@
 		C9B75B2A1F07DFFC00307944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B291F07DFFC00307944 /* Assets.xcassets */; };
 		C9B75B2D1F07DFFC00307944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9B75B2B1F07DFFC00307944 /* LaunchScreen.storyboard */; };
 		C9BAC61A1F0C680A004B7E77 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC6191F0C680A004B7E77 /* NetworkService.swift */; };
+		C9BAC61C1F0C8E04004B7E77 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC61B1F0C8E04004B7E77 /* FeedCell.swift */; };
 		C9F0ED191F09EC55003443C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED181F09EC55003443C9 /* Extensions.swift */; };
 		C9F0ED1D1F09ED1E003443C9 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */; };
 		C9F0ED1F1F09ED63003443C9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED1E1F09ED63003443C9 /* HomeController.swift */; };
@@ -30,6 +31,7 @@
 		C9B75B2C1F07DFFC00307944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9B75B2E1F07DFFC00307944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9BAC6191F0C680A004B7E77 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = ApiServices/NetworkService.swift; sourceTree = "<group>"; };
+		C9BAC61B1F0C8E04004B7E77 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = Views/FeedCell.swift; sourceTree = "<group>"; };
 		C9F0ED181F09EC55003443C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Helpers/Extensions.swift; sourceTree = "<group>"; };
 		C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = Views/VideoCell.swift; sourceTree = "<group>"; };
 		C9F0ED1E1F09ED63003443C9 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = Controllers/HomeController.swift; sourceTree = "<group>"; };
@@ -69,9 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				C9B75B221F07DFFC00307944 /* AppDelegate.swift */,
-				C9F0ED221F0A13E4003443C9 /* Models */,
 				C9F0ED1A1F09ECF7003443C9 /* Views */,
 				C9F0ED1B1F09ECFD003443C9 /* Controllers */,
+				C9F0ED221F0A13E4003443C9 /* Models */,
 				C9BAC6181F0C67C1004B7E77 /* ApiServices */,
 				C9F0ED171F09EC2B003443C9 /* Helpers */,
 				C9B75B291F07DFFC00307944 /* Assets.xcassets */,
@@ -103,6 +105,7 @@
 				C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */,
 				C9F0ED201F09F2FF003443C9 /* MenuBar.swift */,
 				C9A0A2E31F0B3A300036591A /* SettingCell.swift */,
+				C9BAC61B1F0C8E04004B7E77 /* FeedCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				C9F0ED281F0A22E6003443C9 /* Channel.swift in Sources */,
 				C9F0ED1D1F09ED1E003443C9 /* VideoCell.swift in Sources */,
 				C9F0ED241F0A1419003443C9 /* Video.swift in Sources */,
+				C9BAC61C1F0C8E04004B7E77 /* FeedCell.swift in Sources */,
 				C9F0ED191F09EC55003443C9 /* Extensions.swift in Sources */,
 				C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */,
 				C9BAC61A1F0C680A004B7E77 /* NetworkService.swift in Sources */,
