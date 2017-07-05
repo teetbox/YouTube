@@ -34,7 +34,7 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func fetchVideos() {
-        NetworkService.shared.fetchVideos { (videos) in
+        NetworkService.shared.fetchHomeVideos { (videos) in
             self.videos = videos
             self.collectionView.reloadData()
         }

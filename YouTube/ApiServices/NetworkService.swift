@@ -14,8 +14,22 @@ class NetworkService {
     
     private init() {}
     
-    func fetchVideos(completionHandler: @escaping ([Video]) -> Void) {
-        let url = URL(string: "https://s3-us-west-2.amazonaws.com/youtubeassets/home.json")
+    private let baseURL = "https://s3-us-west-2.amazonaws.com/youtubeassets"
+    
+    func fetchHomeVideos(completionHandler: @escaping ([Video]) -> Void) {
+        fetchVideos(from: "\(baseURL)/home.json", completionHandler: completionHandler)
+    }
+    
+    func fetchTrendingVideos(completionHandler: @escaping ([Video]) -> Void) {
+        fetchVideos(from: "\(baseURL)/trending.json", completionHandler: completionHandler)
+    }
+    
+    func fetchSubscriptionVideos(completionHandler: @escaping ([Video]) -> Void) {
+        fetchVideos(from: "\(baseURL)/subscriptions.json", completionHandler: completionHandler)
+    }
+    
+    func fetchVideos(from url: String, completionHandler: @escaping ([Video]) -> Void) {
+        let url = URL(string: url)
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil {
