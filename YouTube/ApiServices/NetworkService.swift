@@ -32,35 +32,19 @@ class NetworkService {
         let url = URL(string: url)
         
         URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print(error!)
+            if let error = error {
+                print(error)
             }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
-                
-                var videos = [Video]()
-                
-                for dictionary in json as! [[String: Any]] {
-                    let video = Video()
-                    video.title = dictionary["title"] as? String
-                    video.thumbnailImageName = dictionary["thumbnail_image_name"] as? String
-                    video.numberOfViews = dictionary["number_of_views"] as? NSNumber
+                if let jsonData = data, let jsonDict = try JSONSerialization.jsonObject(with: jsonData, options: .mutableContainers) as? [[String: Any]] {
                     
-                    let channelDictionary = dictionary["channel"] as! [String: Any]
-                    let channel = Channel()
-                    channel.name = channelDictionary["name"] as? String
-                    channel.profileImageName = channelDictionary["profile_image_name"] as? String
+                    let videos = jsonDict.map { Video(dictionary: $0) }
                     
-                    video.channel = channel
-                    
-                    videos.append(video)
+                    DispatchQueue.main.async {
+                        completionHandler(videos)
+                    }
                 }
-                
-                DispatchQueue.main.async {
-                    completionHandler(videos)
-                }
-                
             } catch let jsonError {
                 print(jsonError)
             }
