@@ -16,6 +16,8 @@
 		C9BAC61C1F0C8E04004B7E77 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC61B1F0C8E04004B7E77 /* FeedCell.swift */; };
 		C9BAC61E1F0CC065004B7E77 /* TrendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC61D1F0CC065004B7E77 /* TrendingCell.swift */; };
 		C9BAC6201F0CC277004B7E77 /* SubscriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BAC61F1F0CC277004B7E77 /* SubscriptionCell.swift */; };
+		C9E6C40E1F0DD1B1000AB505 /* VedioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6C40D1F0DD1B1000AB505 /* VedioPlayerView.swift */; };
+		C9E6C4101F0DD2CB000AB505 /* VideoLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E6C40F1F0DD2CB000AB505 /* VideoLauncher.swift */; };
 		C9F0ED191F09EC55003443C9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED181F09EC55003443C9 /* Extensions.swift */; };
 		C9F0ED1D1F09ED1E003443C9 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */; };
 		C9F0ED1F1F09ED63003443C9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F0ED1E1F09ED63003443C9 /* HomeController.swift */; };
@@ -36,6 +38,8 @@
 		C9BAC61B1F0C8E04004B7E77 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedCell.swift; path = Views/FeedCell.swift; sourceTree = "<group>"; };
 		C9BAC61D1F0CC065004B7E77 /* TrendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrendingCell.swift; path = Views/TrendingCell.swift; sourceTree = "<group>"; };
 		C9BAC61F1F0CC277004B7E77 /* SubscriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SubscriptionCell.swift; path = Views/SubscriptionCell.swift; sourceTree = "<group>"; };
+		C9E6C40D1F0DD1B1000AB505 /* VedioPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VedioPlayerView.swift; path = Views/VedioPlayerView.swift; sourceTree = "<group>"; };
+		C9E6C40F1F0DD2CB000AB505 /* VideoLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoLauncher.swift; path = Controllers/VideoLauncher.swift; sourceTree = "<group>"; };
 		C9F0ED181F09EC55003443C9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Helpers/Extensions.swift; sourceTree = "<group>"; };
 		C9F0ED1C1F09ED1E003443C9 /* VideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCell.swift; path = Views/VideoCell.swift; sourceTree = "<group>"; };
 		C9F0ED1E1F09ED63003443C9 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = Controllers/HomeController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				C9BAC61B1F0C8E04004B7E77 /* FeedCell.swift */,
 				C9BAC61D1F0CC065004B7E77 /* TrendingCell.swift */,
 				C9BAC61F1F0CC277004B7E77 /* SubscriptionCell.swift */,
+				C9E6C40D1F0DD1B1000AB505 /* VedioPlayerView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 			children = (
 				C9F0ED1E1F09ED63003443C9 /* HomeController.swift */,
 				C9A0A2E11F0B1E980036591A /* SettingsLauncher.swift */,
+				C9E6C40F1F0DD2CB000AB505 /* VideoLauncher.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -210,7 +216,9 @@
 				C9F0ED1D1F09ED1E003443C9 /* VideoCell.swift in Sources */,
 				C9F0ED241F0A1419003443C9 /* Video.swift in Sources */,
 				C9BAC61C1F0C8E04004B7E77 /* FeedCell.swift in Sources */,
+				C9E6C40E1F0DD1B1000AB505 /* VedioPlayerView.swift in Sources */,
 				C9F0ED191F09EC55003443C9 /* Extensions.swift in Sources */,
+				C9E6C4101F0DD2CB000AB505 /* VideoLauncher.swift in Sources */,
 				C9BAC6201F0CC277004B7E77 /* SubscriptionCell.swift in Sources */,
 				C9B75B231F07DFFC00307944 /* AppDelegate.swift in Sources */,
 				C9BAC61A1F0C680A004B7E77 /* NetworkService.swift in Sources */,
