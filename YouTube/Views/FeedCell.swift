@@ -53,8 +53,8 @@ class FeedCell: BaseCell, UICollectionViewDataSource, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let videoLauncher = VideoLauncher()
-        videoLauncher.showVideoPlayer()
+//        let videoLauncher = VideoLauncher()
+//        videoLauncher.showVideoPlayer()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

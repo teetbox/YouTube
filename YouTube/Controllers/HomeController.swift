@@ -31,6 +31,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         setupCollectionView()
         setupMenuBar()
         setupNavButtons()
+        
+        hideKeyboardWhenTappedAround()
     }
     
     lazy var menuBar: MenuBar = {
