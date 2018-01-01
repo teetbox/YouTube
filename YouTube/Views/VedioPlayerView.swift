@@ -169,7 +169,7 @@ class VideoPlayerView: UIView {
         }
     }
     
-    func handlePause() {
+    @objc func handlePause() {
         if isPlaying {
             player?.pause()
         } else {
@@ -182,7 +182,7 @@ class VideoPlayerView: UIView {
         pausePlayButton.setImage(image, for: .normal)
     }
     
-    func handleSlideChange() {
+    @objc func handleSlideChange() {
         if let duration = player?.currentItem?.duration {
             let targetSeconds = duration.seconds * Double(videoSlide.value)
             let seekTime = CMTime(seconds: targetSeconds, preferredTimescale: 1)
